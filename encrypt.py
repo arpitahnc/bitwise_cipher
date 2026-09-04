@@ -15,14 +15,6 @@ def rotate_left(byte, shift):
     result = result & 0xFF   # keep only 8 bits
     return result
 
-def rotate_right(byte, shift):
-    shift = shift % 8
-    right_part = byte >> shift
-    left_part = byte << (8 - shift)
-    result = left_part | right_part
-    result = result & 0xFF   # keep only 8 bits
-    return result
-
 def encrypt(text, rotation):
     encrypted_text = ""
 

@@ -7,14 +7,6 @@ def reverse_bits(byte):
     result = int(reversed_binary, 2)
     return result
 
-def rotate_left(byte, shift):
-    shift = shift % 8
-    left_part = byte << shift
-    right_part = byte >> (8 - shift)
-    result = left_part | right_part
-    result = result & 0xFF   # keep only 8 bits
-    return result
-
 def rotate_right(byte, shift):
     shift = shift % 8
     right_part = byte >> shift
